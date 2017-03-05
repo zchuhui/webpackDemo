@@ -1,48 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>web socket</title>
-	<script type="text/javascript">
-		function WebSocketTest(){
-
-			if ("WebSocket" in window) {  
-
-				alert("你的浏览器支持webSocket"); 
-
-				var ws = new WebSocket("ws:");
-
-				ws.onopen = function(){
-					//websocket已经连接，发送数据
-					ws.send("发送数据")；
-					alert("数据发送中");  
-
-				}
-
-				ws.onmessage = function(evt){
-					var received_msg = evt.data;
-					alert("数据已接收");
-				}
-
-				ws.onclose = function(){
-					alert("连接已经关闭");
-				}
- 
-			}
-			else{
-				alert("你的浏览器不支持webSocket");
-			}
-		}
-	</script>
-	<style type="text/css">
-		a:before{
-			content: "卧槽";
-			
-		}
-	</style>
+	<title>webpack demo</title>
 </head>
 <body>
-	<div>
-		<a href="javascript:WebSocketTest()">连接 WebSocket</a> 
-	</div>
+
+	<script src="main.js"></script>
 </body>
 </html>
